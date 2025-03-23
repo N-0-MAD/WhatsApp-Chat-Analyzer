@@ -1,6 +1,6 @@
 # **WhatsApp Chat Analysis**
 
-This project analyzes WhatsApp chat data using **Text Preprocessing, Topic Modeling, and Network Analysis** to extract meaningful insights.
+This project analyzes WhatsApp chat data (Especially Group Chat Data) using **Text Preprocessing, Topic Modeling, and Network Analysis** to extract meaningful insights.
 
 ## **Features**
 - **Preprocessing:** Cleans and structures WhatsApp chat data.
