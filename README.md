@@ -13,7 +13,7 @@ This project analyzes WhatsApp chat data using **Text Preprocessing, Topic Model
 
 ### **Clone the Repository**
 ```bash
-git clone <repo_link>
+git clone [<repo_link>](https://github.com/N-0-MAD/WhatsApp-Chat-Analyzer)
 cd <repo_folder>
 ```
 ### **Install Dependencies**
