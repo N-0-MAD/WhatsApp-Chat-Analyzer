@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import sys
 
 def create_interaction_graph(df):
-    """Create an interaction graph from WhatsApp chat data."""
     G = nx.Graph()
     df = df[df['user'] != 'notification']
     user_interactions = df['user'].value_counts().to_dict()
@@ -21,7 +20,6 @@ def create_interaction_graph(df):
 
 
 def plot_graph(G, output_path=None):
-    """Plot the WhatsApp interaction graph."""
     plt.figure(figsize=(12, 8))
     pos = nx.spring_layout(G, seed=42) 
 
