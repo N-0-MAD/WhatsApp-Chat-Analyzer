@@ -1,0 +1,7 @@
+networkx
+matplotlib
+pandas
+numpy
+nltk
+scikit-learn
+emoji
