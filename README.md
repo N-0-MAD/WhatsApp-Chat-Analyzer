@@ -22,10 +22,10 @@ pip install -r requirements.txt
 ```
 ## **Usage**
 ### Step 1: Preprocess the Chat Data
-This script cleans and structures the raw WhatsApp chat data.
-File: Preprocess.py
+- This script cleans and structures the raw WhatsApp chat data.
+- File: Preprocess.py
 
-**Run the script:**
+Run the script:
 ```python
 import Preprocess
 
@@ -39,8 +39,8 @@ df.to_csv("data/processed_chat.csv", index=False)
 data/processed_chat.csv (Cleaned and structured chat data)
 
 ### Step 2: Perform Topic Modeling
-This step identifies key topics discussed in the chat using LDA.
-File: topic_modeling.py
+- This step identifies key topics discussed in the chat using LDA.
+- File: topic_modeling.py
 
 Run the script:
 ```python
@@ -67,12 +67,13 @@ topic_modeling.plot_topic_trends(df)
 topic_modeling.top_users_per_topic(df)
 ```
 **Output Files:**
-data/chat_with_topics.csv (Chat data with assigned topics)
-Graph: Topic trends over time
+- data/chat_with_topics.csv (Chat data with assigned topics)
+- Graph: Topic trends over time
 
 ### Step 3: Generate and Plot Network Graph
-This step visualizes user interactions in a network graph.
-File: network_analysis.py
+- This step visualizes user interactions in a network graph.
+- File: network_analysis.py
+
 Run the script:
 ```python
 import pandas as pd
@@ -91,9 +92,10 @@ network_analysis.plot_graph(G, output_path="data/interaction_network.png")
 data/interaction_network.png (WhatsApp user interaction graph)
 
 ## **Notes**
-Ensure your chat file follows the standard WhatsApp export format.
-Ensure that the timestamps are in am/pm format (12-hours)
-Adjust num_topics in topic_modeling.py for different topic analysis.
-Large chat datasets may take longer to process.
+- Ensure your chat file follows the standard WhatsApp export format.
+- Ensure that the timestamps are in am/pm format (12-hours)
+- Adjust num_topics in topic_modeling.py for different topic analysis.
+- Large chat datasets may take longer to process.
+
 
 ### Now you’re all set to analyze your WhatsApp group discussions! 
