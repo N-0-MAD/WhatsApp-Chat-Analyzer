@@ -60,7 +60,6 @@ def display_topics(model, feature_names, num_words=10):
         print(f"\n🔹 Topic {idx+1}: ", ", ".join([feature_names[i] for i in topic.argsort()[-num_words:]]))
 
 def plot_topic_trends(df):
-    """Plots topic trends over time."""
     topic_trend = df.groupby(['date', 'topic']).size().unstack(fill_value=0)
     plt.figure(figsize=(12, 6))
     
@@ -80,14 +79,4 @@ def top_users_per_topic(df):
     top_users = user_topic_count.sort_values(['topic', 'count'], ascending=[True, False]).groupby('topic').head(3)
     print(top_users)
 
-if __name__ == "__main__":
-
-    df = pd.read_csv("data/processed_chat.csv", parse_dates=['date'])
-    lda_model, vectorizer, X, df = perform_topic_modeling(df, num_topics=5)
-    df.to_csv("data/chat_with_topics.csv", index=False)
-    feature_names = vectorizer.get_feature_names_out()
-    display_topics(lda_model, feature_names)
-
-
-    top_users_per_topic(df)
 
