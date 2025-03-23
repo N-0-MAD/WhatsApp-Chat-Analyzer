@@ -42,10 +42,3 @@ def load_chat(filename):
         print(f"Error loading chat: {e}")
         return None
 
-if __name__ == "__main__":
-    # Example usage
-    df = load_chat("data/chat.txt")  # Ensure your file is in the 'data/' directory
-    if df is not None:
-        df.to_csv("data/processed_chat.csv", index=False)
-        print("Chat data processed and saved as 'processed_chat.csv'.")
-        print(df.head())
